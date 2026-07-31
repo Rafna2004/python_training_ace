@@ -1,0 +1,21 @@
+def min_platforms(arr, dep):
+    arr.sort()
+    dep.sort()
+
+    platforms = 0
+    max_platforms = 0
+    a=0
+    d= 0
+
+    while  a < len(arr) :
+        if arr[a] < dep[d]:
+            platforms += 1
+            a += 1
+        else:
+            platforms -= 1
+            d += 1
+
+        max_platforms = max(max_platforms, platforms)
+
+    return max_platforms
+print(min_platforms([900, 940, 950, 1100, 1500, 1800], [910, 1200, 1120, 1130, 1900, 2000]))
