@@ -20,20 +20,13 @@ while temp:
     print(temp.val, end=" -> ")
     temp = temp.next
 print("None")
-
-
-def is_present(head, target):
-    temp = head
-    while temp:
-        if temp.val == target:
-            return True
-        temp = temp.next
-    return False
-
-target = int(input("Enter number to search: "))
-if is_present(head, target):
-    print(f"Number {target} is present in the linked list.")
-else:
-    print(f"Number {target} is NOT present in the linked list.")
-
+int=4
+temp=head.next
+flag=0
+while temp:
+    if temp.val==int:
+        flag=1
+        break
+    temp=temp.next
+print(flag)    
 
