@@ -27,3 +27,11 @@ def pre_order(node):
     pre_order(node.left)
     pre_order(node.right)
 pre_order(A)    
+
+def in_order(node):
+    if not node:
+        return
+    in_order(node.left)
+    print(node)
+    in_order(node.right)
+in_order(A)    
